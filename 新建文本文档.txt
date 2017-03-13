@@ -1,0 +1,8 @@
+echo 1 > /proc/sys/net/ipv4/ip_forward 或者修改/etc/sysctl.conf中的ip_forward=1
+
+net.ipv4.ip_forward=1
+sysctl -p
+
+
+
+docker run -d -p 1988:1988 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1988 -k $yourpassword -m aes-256-cfb
