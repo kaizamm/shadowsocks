@@ -1,0 +1,10 @@
+dpkg --add-architecture i386
+apt install wine
+apt-get -f install
+apt-get -f install
+
+wget https://download.teamviewer.com/download/teamviewer_i386.deb
+dpkg -i teamviewer_i386.deb 
+
+INSTALL_Shadowsocks:
+https://my.oschina.net/u/1432769/blog/619651
