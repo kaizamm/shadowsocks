@@ -1,0 +1,19 @@
+## INSTALL shadowsocks
+# pip install shadowsocks
+
+# echo 1 > /proc/sys/net/ipv4/ip_forward 
+
+# vi /etc/sysctl.con 
+# ip_forward=1
+
+# net.ipv4.ip_forward=1
+# sysctl -p
+
+## server
+#docker run -d -p 1988:1988 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1988 -k $yourpassword -m aes-256-cfb
+OR
+# server
+# ssserver -d -c /etc/shadowsocks.json 
+
+## client
+# sslocal -d -s 45.76.111.133 -p 1988 -k "12345678990" 
